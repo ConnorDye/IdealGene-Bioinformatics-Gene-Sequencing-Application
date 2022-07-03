@@ -1,21 +1,17 @@
 # Bioinformatics Gene Sequencing Application
 
-This program consists of two applications: hencode.c which utilizes huffman encoding to compress a file, and hdecode.c to decompress a file.
+In bioinformatics many problems consist of determining how the structures of genes align using a scoring matrix. This match up allows us to infer the gene's functions. 
 
 Created by Connor Dye as a California Polytechnic University Project.
 
-## Hencode.c (Huffman Encode) Features
-- Usage: ./hencode infile [ outfile ] where the infile is the file to be encoded and outfile is an optional argument (output goes to stdout if no outfile is specified)
-- encodes input into a binary huffman encoded file
+## main.py Features
+- Usage: given two strings which consists of DNA nucleic acids (A for adenine, T for thymine, etc) the application will display the gene alignment with the highest score
+- program accepts as a command line argument the name of a file containing the two genes as strings and a
+scoring matrix. Program will print to stdout the highest scoring alignment according to the following format: **1.)** The first given string, assumed to be x, will be printed above the second given string, assumed to be y and **2.)** The columns of the alignment will be space-separated, and ‘-’ characters are used to represent spaces within the aligned strings
+-program utilizes the bioinformatics dynamic programming Needleman–Wunsch algorithm
 
-## Hdecode.c (Huffman Decode) Features
-- Usage: ./hdecode [ ( infile | - ) [ outfile ] ] where infile and outfile are optional file arguments (input and output come from stdin and stdout if these are not specified)
-- decodes input and restores the original data.
 
 ## Notes
-- list.c is a custom built and error tested linked list data structure library that works on the same node struct as tree.c
-- tree.c is a custom built binary tree data structure library that works on the same node struct as list.c
-- together these allow for the huffman algorithm to be carried out:  1.) generate a histogram of all the characters in the file  2.) generate a linked list of the characters in ascending order of frequency  3.) the first two nodes of the list become a tree with the root being the sum of the two removed nodes and the left and right child being the removed nodes  4.) reinsert tree from the previous step at the head of the list and repeat until your list consists of only a single node  5.) trace the tree to get the huffman codes to encode
-- bit.c is our bit library that allows us to compress based on the huffman codes; this library allows for an abstraction of the handling of bits to compress and decompress
-- helper functions to create headers to recreate the tree are in hdecode.c and hencode.c
-- hencode.c and hdecode.c includes the parsing and main functionality to put these libraries together
+- program supports genes passed in as strings with nucleic acids A, C, G, T, "-"
+- scoring matrix consists of 5 rows and 5 columns
+- the scoring matrix may give value to certain base pairs that aren't exact matches, but that hold some sort of value (e.g A matched with T may be given some value as it may signify a mutation in a gene)
