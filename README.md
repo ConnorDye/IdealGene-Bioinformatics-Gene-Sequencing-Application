@@ -8,7 +8,7 @@ Created by Connor Dye as a California Polytechnic University Project.
 - Usage: given two strings which consists of DNA nucleic acids (A for adenine, T for thymine, etc) the application will display the gene alignment with the highest score
 - main.py accepts as a command line argument the name of a file containing the two genes as strings and a
 scoring matrix. Program will print to stdout the highest scoring alignment according to the following format: **1.)** The first given string, assumed to be x, will be printed above the second given string, assumed to be y and **2.)** The columns of the alignment will be space-separated, and ‘-’ characters are used to represent spaces within the aligned strings
--run.sh is a simple script to run the program with a file
+- run.sh is a simple script to run the program with a file
 
 
 ## Notes
