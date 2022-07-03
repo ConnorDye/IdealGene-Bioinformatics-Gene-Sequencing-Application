@@ -1,6 +1,6 @@
 # Bioinformatics Gene Sequencing Application
 
-In bioinformatics many problems consist of determining how the structures of genes align using a scoring matrix. This match up allows us to infer the gene's functions. Program utilizes the bioinformatics dynamic programming Needleman–Wunsch algorithm.
+In bioinformatics many problems consist of determining how the structures of genes align using a scoring matrix. This match up allows us to infer the gene's functions. This program utilizes a bioinformatics dynamic programming algorithm similar to the Needleman–Wunsch algorithm.
 
 Created by Connor Dye as a California Polytechnic University Project.
 
