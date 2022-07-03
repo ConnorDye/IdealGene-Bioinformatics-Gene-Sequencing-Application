@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python3 asgn3.py "$1"
+python3 main.py "$1"
