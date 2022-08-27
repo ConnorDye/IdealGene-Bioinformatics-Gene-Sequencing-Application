@@ -1,4 +1,4 @@
-# Bioinformatics Gene Sequencing Application
+# IdealGene: Bioinformatics Gene Sequencing Application
 
 In bioinformatics many problems consist of determining how the structures of genes align using a scoring matrix. This match up allows us to infer the gene's functions. This program utilizes a bioinformatics **dynamic programming** algorithm similar to the Needleman–Wunsch algorithm.
 
